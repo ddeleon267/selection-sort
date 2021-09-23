@@ -1,12 +1,20 @@
 function selectionSort(arr) {
+
+  // cons
+  // destructive
+
+  // pros
+  // clean
+  // fast
+
   const sorted = [];
 
-  while (arr.length > 0) {
-    const min = Math.min(...arr);
-    const idx = arr.indexOf(min);
+  while (arr.length > 0) { // as long as there are still values to sort
+    const min = Math.min(...arr); // find min value in array
+    const idx = arr.indexOf(min); // find where it is
 
-    sorted.push(min);
-    arr.splice(idx, 1);
+    sorted.push(min); // push it into new array - ordering doesn't matter because you're going from least to greatest anyways
+    arr.splice(idx, 1); // remove it from orig array; it's already accounted for
   }
 
   return sorted;
